@@ -1,27 +1,27 @@
+import java.io.*;
 import java.util.*;
-class reverse {
-	
-	private static Scanner sc;
-	
-	public static void main(String[] args) {
-		
-		String revStrWords;
-
-		sc= new Scanner(System.in);
-		
-		System.out.print("Enter String to Reverse its Letters =  ");
-		revStrWords = sc.nextLine();
-		
-		String[] strArray = revStrWords.split(" ");
-		
-		for(int i = 0; i < strArray.length; i++) 
-		{
-			char[] ch = strArray[i].toCharArray();
-			for(int j = ch.length - 1; j >= 0; j--) 
-			{
-				System.out.print(ch[j]);
-			}
-			System.out.print(" ");
-		}
-	}
+ class reverse
+{
+    public static void main(String arg[])
+    {
+          try
+          {
+               Scanner sc=new Scanner(System.in);
+               int n,re=0,rem;
+               System.out.println("Enter a number:");
+               n=sc.nextInt();
+               while(n!=0)
+               {
+                  rem=n%10;
+                  re=re*10+rem;
+                  n=n/10;
+                }
+               
+               System.out.println("The reversed number is:"+re);
+            }
+           catch(Exception e)
+           {
+               System.out.println("Enter a valid number:");
+           }
+      }
 }
